@@ -2,7 +2,10 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O",
 
 let pass1 = document.getElementById("passOutput1")
 let pass2 = document.getElementById("passOutput2")
+let pwNum = document.getElementById("pwNumber")
 let passwordlength = 15
+let pw1 = "password 1"
+let pw2 = "password 2"
 
 password1 = ""
 password2 = ""
@@ -34,19 +37,20 @@ function copyToClipboard(text) {
 let element = document.getElementById('passOutput1');
 element.addEventListener('click', function() {
   copyToClipboard(password1);
-  snackbar()
+  snackbar(pw1)
 });
 
 let element2 = document.getElementById('passOutput2');
 element2.addEventListener('click', function() {
   copyToClipboard(password2);
-  snackbar()
+  snackbar(pw2)
 });
 
-function snackbar() {
+function snackbar(snackbarNeedsAPassword) {
   var x = document.getElementById("snackbar");
   x.className = "show";
   setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+  pwNum.textContent = snackbarNeedsAPassword
 }
 
 // limit it to 15 characters - done!!!

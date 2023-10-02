@@ -13,6 +13,7 @@ body {
     width: 550px;
     height: 550px;
     margin: 0 auto;
+    margin-top: 30px;
 }
 
 .mainBox h1 {
@@ -23,10 +24,16 @@ body {
 .mainBox h2 {
     font-size: 20px;
     font-weight: 100;
+    -webkit-font-smoothing: antialiased;
+    color: #D5D4D8;
 }
 
 .mainBox button {
     font-weight: 500;
+}
+
+.mainContent {
+    padding: 115px 52px;
 }
 
 #randomPassText {

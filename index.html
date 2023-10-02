@@ -8,19 +8,21 @@
     </head>
     <body>
         <div class="mainBox">
-            <h1>Generate a <br/><span id="randomPassText">random password</span></h1>
-            <h2>Never use an insecure password again.</h2>
-            <button onclick="generatePasswords()">Generate passwords</button>
-            <hr>
-            <div class="passfields">
-                <div id="passOutput1">
-                    <p></p>
+            <div class="mainContent">
+                <h1>Generate a <br/><span id="randomPassText">random password</span></h1>
+                <h2>Never use an insecure password again.</h2>
+                <button onclick="generatePasswords()">Generate passwords</button>
+                <hr>
+                <div class="passfields">
+                    <div id="passOutput1">
+                        <p></p>
+                    </div>
+                    <div id="passOutput2">
+                        <p></p>
+                    </div>
                 </div>
-                <div id="passOutput2">
-                    <p></p>
-                </div>
+                <div id="snackbar">Copied <span id="pwNumber"></span> to clipboard!</div>
             </div>
-            <div id="snackbar">Copied to clipboard!</div>
         </div>
         <script src="index.js"></script>
     </body>
