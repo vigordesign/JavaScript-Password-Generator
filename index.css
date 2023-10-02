@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    background-color: #1C1C1C;
+    color: #fff
+}
+
+.mainBox {
+    background-color: #1F2937;
+    width: 550px;
+    height: 550px;
+    margin: 0 auto;
+}
+
+#randomPassText {
+    color: #4ADF86;
+}
+
+.passfields {
+    display: flex;
+    flex-direction: row;
+}
+
+#passOutput1, #passOutput2 {
+    width: 211px;
+    height: 39px;
+    background-color: #273549;
+    font-size: 12px;
+    line-height: normal;
+    min-height: 1em;
+    margin:5px;
+}
+
