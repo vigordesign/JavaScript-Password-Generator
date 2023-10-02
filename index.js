@@ -3,6 +3,7 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O",
 let pass1 = document.getElementById("passOutput1")
 let pass2 = document.getElementById("passOutput2")
 let pwNum = document.getElementById("pwNumber")
+let snackEl = document.getElementById("snackbar");
 let passwordlength = 15
 let pw1 = "password 1"
 let pw2 = "password 2"
@@ -13,6 +14,7 @@ password2 = ""
 function generatePasswords() {
     password1 = ""
     password2 = ""
+    snackEl.className = snackEl.className.replace("show", "hide")
     for (let i = 0; i < passwordlength; i++) {
         let passwordFirst = Math.floor(Math.random() * characters.length)
         let passwordSecond = Math.floor(Math.random() * characters.length)
@@ -23,17 +25,7 @@ function generatePasswords() {
     passOutput2.textContent = password2
 }
 
-function copyToClipboard(text) {
-    const type = 'text/plain';
-    const blob = new Blob([text], {type});
-    const data = [new ClipboardItem({[type]: blob})];
-    navigator.clipboard.write(data).then(function() {
-      console.log('Copied to clipboard!');
-    }, function() {
-      console.log('Failed to copy to clipboard.');
-    });
-  }
-
+//// DISPLAY PASSWORD ////
 let element = document.getElementById('passOutput1');
 element.addEventListener('click', function() {
   copyToClipboard(password1);
@@ -46,10 +38,23 @@ element2.addEventListener('click', function() {
   snackbar(pw2)
 });
 
+//// COPY TO CLIPBOARD ////
+function copyToClipboard(text) {
+    const type = 'text/plain';
+    const blob = new Blob([text], {type});
+    const data = [new ClipboardItem({[type]: blob})];
+    navigator.clipboard.write(data).then(function() {
+      console.log('Copied to clipboard!');
+    }, function() {
+      console.log('Failed to copy to clipboard.');
+    });
+  }
+
+//// SHOW SNACKBAR ////
+//ref: https://www.w3schools.com/howto/howto_js_snackbar.asp
 function snackbar(snackbarNeedsAPassword) {
-  var x = document.getElementById("snackbar");
-  x.className = "show";
-  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+  snackEl.className = "show";
+  setTimeout(function(){ snackEl.className = snackEl.className.replace("show", ""); }, 3000);
   pwNum.textContent = snackbarNeedsAPassword
 }
 
