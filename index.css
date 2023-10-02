@@ -1,7 +1,12 @@
+/* font-family: 'Inter', sans-serif;
+font-family: 'Karla', sans-serif; */
+
 body {
     margin: 0;
     background-color: #1C1C1C;
-    color: #fff
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    
 }
 
 .mainBox {
@@ -9,6 +14,20 @@ body {
     width: 550px;
     height: 550px;
     margin: 0 auto;
+}
+
+.mainBox h1 {
+    font-family: 'Karla', sans-serif;
+    font-size: 40px;
+}
+
+.mainBox h2 {
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.mainBox button {
+    font-weight: 500;
 }
 
 #randomPassText {
@@ -29,6 +48,8 @@ body {
     min-height: 1em;
     margin:5px;
 }
+
+
 
 /* The snackbar - position it at the bottom and in the middle of the screen */
 #snackbar {
