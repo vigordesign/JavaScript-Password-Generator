@@ -34,14 +34,23 @@ function copyToClipboard(text) {
 let element = document.getElementById('passOutput1');
 element.addEventListener('click', function() {
   copyToClipboard(password1);
+  snackbar()
 });
 
 let element2 = document.getElementById('passOutput2');
-element.addEventListener('click', function() {
+element2.addEventListener('click', function() {
   copyToClipboard(password2);
+  snackbar()
 });
+
+function snackbar() {
+  var x = document.getElementById("snackbar");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
 
 // limit it to 15 characters - done!!!
 // make it a string - done!!!
 // clear the boxes and replace the passwords with new ones if you click the button again! - done!!!! :D 
-// copy on clik! Done for one do for the other!
+// copy on click! Done for one do for the other!
+// toast! Looks like it can be done with html and css!!! YAY!! DONE!!
