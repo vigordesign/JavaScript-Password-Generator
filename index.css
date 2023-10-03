@@ -14,6 +14,15 @@ body {
     /* height: 550px; */
     margin: 0 auto;
     margin-top: 30px;
+    min-width: 550px;
+}
+
+/* MOBILE */
+
+@media only screen and (max-width: 680px) {
+  .mainBox {
+      width: 100%;
+  }
 }
 
 .mainBox h1 {
