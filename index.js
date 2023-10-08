@@ -5,8 +5,8 @@ let pass2 = document.getElementById("passOutput2")
 let pwNum = document.getElementById("pwNumber")
 let snackEl = document.getElementById("snackbar");
 let passwordlength = 15
-let pw1 = "password 1"
-let pw2 = "password 2"
+let pw1forTheSnackBar = "password 1"
+let pw2forTheSnackBar = "password 2"
 
 password1 = ""
 password2 = ""
@@ -29,13 +29,13 @@ function generatePasswords() {
 let element = document.getElementById('passOutput1');
 element.addEventListener('click', function() {
   copyToClipboard(password1);
-  snackbar(pw1)
+  snackbar(pw1forTheSnackBar)
 });
 
 let element2 = document.getElementById('passOutput2');
 element2.addEventListener('click', function() {
   copyToClipboard(password2);
-  snackbar(pw2)
+  snackbar(pw2forTheSnackBar)
 });
 
 //// COPY TO CLIPBOARD ////
